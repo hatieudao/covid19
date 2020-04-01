@@ -1,10 +1,18 @@
-#myChart{
-    width: 900px ;
-    height: 600px;
-    margin: 100px 0;
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
-#myChart2{
-    width: 600px ;
-    height: 600px;
-    margin: 100px 0;
+.title{
+    text-align: center;
+    font-size: 3rem;
+    text-shadow: 2px 2px 2px #999;
+}
+#contryImg{
+    padding: 0;
+    width: auto;
+}
+.flag{
+    width: 50%;
+    height: 50%;
 }

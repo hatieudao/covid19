@@ -1,15 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <!-- https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js -->
+    <script src="Chart.min.js"></script>
     <title>Tình hình dịch bệnh Covid-19</title>
 </head>
 <body>
-    <canvas id="myChart"></canvas>
-    <canvas id="myChart2"></canvas>
-    <script src="app.js"></script>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-8 col-md-12 col-sm-12 col-12">
+                <h1 class="title">COVID 19</h1>
+                <table id="tb" class="table table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                        <th scope="col" id="countryImg" >Quốc Gia</th>
+                        <th scope="col">Số ca nhiễm</th>
+                        <th scope="col">Số ca nhiễm mới</th>
+                        <th scope="col">Số ca hồi phục</th>
+                        <th scope="col">Số ca tử vong</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td ><select name="country" id="country" class="option-country"></select></td>
+                        <td id="tb-confirmed" >Số ca nhiễm</td>
+                        <td id="tb-newConfirmed" >Số ca nhiễm mới</td>
+                        <td id="tb-recovered" >Số ca hồi phục</td>
+                        <td id="tb-deaths" >Số ca tử vong</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pieChart col-xl-6 col-lg-8 col-12">
+                <canvas id="myChart2"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="lineChart col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
 </body>
 </html>
